@@ -1,18 +1,17 @@
 # IDLファイル
-- https://github.com/fkanehiro/hrpsys-base/tree/master/idl
+
+* [IDL files](https://github.com/fkanehiro/hrpsys-base/tree/master/idl)
+
 # 目次
-- [TimedLongSeqSeq](#timedlongseqseq)
-- [TimedQuaternion](#timedquaternion)
-- [TimedWrench](#timedwrench)
-- [TimedSpatialVelocity](#timedspatialvelocity)
 
-
-
-
+* [TimedLongSeqSeq](#timedlongseqseq)
+* [TimedQuaternion](#timedquaternion)
+* [TimedWrench](#timedwrench)
+* [TimedSpatialVelocity](#timedspatialvelocity)
 
 ### ControlMode
-以下の値を列挙。  
-  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -24,8 +23,6 @@
 |MODE_ABSOLUTE_GLOBAL_VELOCITY||
 
 ### AccelerationFilterParam
-  
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -33,9 +30,8 @@
 |use_filter|double| ||
 |filter_param|double| ||
 
-
 ### Footstep
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |pos|[OpenHRP::AutoBalancerService::DblArray3](#dblarray3)|足の位置|m|
@@ -43,20 +39,20 @@
 |leg|string|脚の名前(rlegかlleg)||
 
 ### DblArray3
-double[3]として定義。 
+
+double[3]として定義。
 
 ### DblArray4
-double[4]として定義。 
+
+double[4]として定義。
 
 ### Footsteps
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |fs|sequence< [OpenHRP:AutoBalancerService:::Footstep](#footstep) >|||
 
-
 ### StepParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -66,15 +62,15 @@ double[4]として定義。
 |heel_angle|double|踵の最大角度|deg|
 
 ### StepParams
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |sps|sequence< [OpenHRP::AutoBalancerService::StepParam](#stepparam) >|||
 
 ### SupportLegState
-以下の値を列挙。 
-支持脚の状態を表現。 
+
+以下の値を列挙。
+支持脚の状態を表現。
 
 |名前|説明|
 |---|---|
@@ -82,10 +78,10 @@ double[4]として定義。
 |LLEG|左足|
 |BOTH|両足|
 
-
 ### OrbitType
-以下の値を列挙。 
-遊脚軌道の種類を表現。 
+
+以下の値を列挙。
+遊脚軌道の種類を表現。
 
 |名前|説明|
 |---|---|
@@ -97,10 +93,10 @@ double[4]として定義。
 |CYCLOIDDELAYKICK||
 |CROSS||
 
-
 ### GaitType
-以下の値を列挙。 
-歩容の種類を表現。 
+
+以下の値を列挙。
+歩容の種類を表現。
 
 |名前|説明|
 |---|---|
@@ -110,10 +106,9 @@ double[4]として定義。
 |CRAWL|クロール歩容|
 |GALLOP|ギャロップ歩容|
 
-
 ### ControllerMode
-以下の値を列挙。 
 
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -122,18 +117,18 @@ double[4]として定義。
 |MODE_SYNC_TO_IDLE||
 |MODE_SYNC_TO_ABC||
 
-
 ### UseForceMode
-以下の値を列挙。 
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
 |MODE_NO_FORCE||
 |MODE_REF_FORCE||
 
-
 ### StrideLimitationType
-以下の値を列挙。 
+
+以下の値を列挙。
 足先の可動範囲の種類を表現。
 
 |名前|説明|
@@ -142,7 +137,6 @@ double[4]として定義。
 |CIRCLE|球体|
 
 ### FootstepParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -155,10 +149,10 @@ double[4]として定義。
 |support_leg_with_both|[OpenHRP::AutoBalancerService::SupportLegState](#supportlegstate)|||
 
 ### StrSequence
-string型の配列として定義。 
+
+string型の配列として定義。
 
 ### GaitGeneratorParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -202,7 +196,8 @@ string型の配列として定義。
 |leg_margin|[OpenHRP::AutoBalancerService::DblArray4](#dblarray4)|脚先位置の可動範囲までの余裕(前方、後方、外側、内側)|m|
 
 ### IKLimbParameters
-手足の逆運動学のパラメータを表現。  
+
+手足の逆運動学のパラメータを表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -212,9 +207,7 @@ string型の配列として定義。
 |reference_gain|double|||
 |manipulability_limit|double|||
 
-
 ### AutoBalancerParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -239,10 +232,9 @@ string型の配列として定義。
 |default_gait_type|[OpenHRP::AutoBalancerService::GaitType](#gaitType)|デフォルトの歩容の種類||
 |ik_limb_parameters|sequence< [OpenHRP::AutoBalancerService::IKLimbParameters](#iklimbparameters) >|手足の逆運動学パラメータ||
 
-
-
 ### CollisionState
-接触状態を表現。  
+
+接触状態を表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -256,31 +248,31 @@ string型の配列として定義。
 |lines|sequence< [OpenHRP::CollisionDetectorService::Line](#line) >|　|m|
 
 ### Line
-[OpenHRP::CollisionDetectorService::DblSequence3](#dblsequence3)型の配列として定義。 
+
+[OpenHRP::CollisionDetectorService::DblSequence3](#dblsequence3)型の配列として定義。
 
 ### DblSequence3
-double型の配列として定義。 
+
+double型の配列として定義。
 
 ### EmergencyStopperParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |default_recover_time|double|　|s|
 |default_retrieve_time|double|　|s|
 |is_stop_mode|boolean|　||
 
-
 ### ComponentProfile
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |count|long|　||
 |max_process|double|　||
 |avg_process|double|　||
 
-
 ### Profile
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |max_period|double|　||
@@ -291,9 +283,9 @@ double型の配列として定義。
 |count|long|　||
 |timeover|long|　||
 
-
 ## TimedLongSeqSeq
-long型の2次元配列を格納するデータ型。  
+
+long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -301,8 +293,8 @@ long型の2次元配列を格納するデータ型。
 |data|sequence< sequence< long > >|データ||
 
 ## TimedQuaternion
-クォータニオンを格納するデータ型。  
 
+クォータニオンを格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -310,7 +302,8 @@ long型の2次元配列を格納するデータ型。
 |data|[OpenHRP::Quaternion](#quaternion)>|データ||
 
 ### Quaternion
-クォータニオンを表現。  
+
+クォータニオンを表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -319,11 +312,9 @@ long型の2次元配列を格納するデータ型。
 |z|double|虚部||
 |w|double|実部||
 
-
 ## TimedWrench
-力とトルク値を格納するデータ型。  
 
-
+力とトルク値を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -331,16 +322,17 @@ long型の2次元配列を格納するデータ型。
 |data|[OpenHRP::Wrench](#wrench)>|データ||
 
 ### Wrench
-力とトルクを表現。  
+
+力とトルクを表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |force|[RTC::Vector3D](拡張データ型#vector3d)|力||N|
 |torque|[RTC::Vector3D](拡張データ型#vector3d)|トルク||Nm|
 
-
 ## TimedSpatialVelocity
-3次元の速度と角速度を格納するデータ型。  
+
+3次元の速度と角速度を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -348,7 +340,8 @@ long型の2次元配列を格納するデータ型。
 |data|[OpenHRP::SpatialVelocity](#spatialvelocity)>|データ||
 
 ### SpatialVelocity
-3次元の速度と角速度を表現。  
+
+3次元の速度と角速度を表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -356,7 +349,6 @@ long型の2次元配列を格納するデータ型。
 |vel|[RTC::Velocity3D](拡張データ型#velocity3d)|角度||
 
 ### RobotState
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -365,19 +357,19 @@ long型の2次元配列を格納するデータ型。
 |q|sequence< double >|||
 
 ### RobotStateSeq
-[OpenHRP::RobotState](#robotstate)型の配列として定義。 
+
+[OpenHRP::RobotState](#robotstate)型の配列として定義。
 
 ### SceneState
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |time|double|||
 |states|[OpenHRP::RobotStateSeq](#robotstateseq)|||
 
-
 ### impedanceParam
-インピーダンス制御のパラメータ。  
+
+インピーダンス制御のパラメータ。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -397,15 +389,15 @@ long型の2次元配列を格納するデータ型。
 |ik_optional_weight_vector|[OpenHRP::ImpedanceControllerService::DblSequence](#dblsequence)|||
 |use_sh_base_pos_rpy|boolean|||
 
-
 ### DblSequence
+
 double型の配列として定義。
 
 ### Dbl3Sequence
+
 double型の2次元配列として定義。
 
 ### objectTurnaroundDetectorParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -416,10 +408,9 @@ double型の2次元配列として定義。
 |acc_offset|double| |s|
 |sensorRPY_offset|double| |s|
 
-
 ### DetectorMode
-以下の値を列挙。  
-  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -429,18 +420,17 @@ double型の2次元配列として定義。
 |MODE_MAX_TIME||
 
 ### DetectorTotalWrench
-以下の値を列挙。  
-  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
 |TOTAL_FORCE||
 |TOTAL_MOMENT||
 
-
 ### KFAlgorithm
-以下の値を列挙。  
-  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -448,7 +438,6 @@ double型の2次元配列として定義。
 |QuaternionExtendedKalmanFilter||
 
 ### KalmanFilterParam
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -459,22 +448,17 @@ double型の2次元配列として定義。
 |acc_offset|double| ||
 |sensorRPY_offset|double| ||
 
-
-
-
-
-
 ### AABB
+
 軸並行境界ボックスを表現。
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |pos|[RTC::Point3D](拡張データ型#point3d)|x,y,zのいずれかが最小の頂点座標||
 |size|[RTC::Size3D](拡張データ型#size3d)|x,y,zの長さ||
 
-
 ### OGMap3D
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |resolution|double|||
@@ -484,9 +468,8 @@ double型の2次元配列として定義。
 |nz|double|||
 |cells|[RTC::OGMapCells](拡張データ型#ogmapcells)|||
 
-
 ### ReferenceForceUpdaterParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |motion_dir|[OpenHRP::ReferenceForceUpdaterService::DblSequence3](#dblsequence3)|||
@@ -497,12 +480,8 @@ double型の2次元配列として定義。
 |d_gain|double|||
 |i_gain|double|||
 
-
-
-
-
 ### forcemomentOffsetParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |force_offset|[OpenHRP::ReferenceForceUpdaterService::DblSequence3](#dblsequence3)| |N|
@@ -510,9 +489,9 @@ double型の2次元配列として定義。
 |link_offset_centroid|[OpenHRP::ReferenceForceUpdaterService::DblSequence3](#dblsequence3)| |m|
 |link_offset_mass|double| |kg|
 
-
 ### RobotState
-ロボットの状態を表現。  
+
+ロボットの状態を表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -526,19 +505,21 @@ double型の2次元配列として定義。
 |voltage|double|電圧値|V|
 |current|double|電流値|A|
 
-
 ### DblSequence6
-double型の配列として定義。 
 
+double型の配列として定義。
 
 ### LongSequenceSequence
-[OpenHRP::RobotHardwareService::LongSequence](#longsequence)型の配列として定義。 
+
+[OpenHRP::RobotHardwareService::LongSequence](#longsequence)型の配列として定義。
 
 ### LongSequence
-long型の配列として定義。 
+
+long型の配列として定義。
 
 ### BatteryState
-電源の状態を表現。  
+
+電源の状態を表現。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -547,7 +528,7 @@ long型の配列として定義。
 |soc|double|充電率|%|
 
 ### RobotState2
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |angle|[OpenHRP::RobotHardwareService::DblSequence](#dblsequence)|ジョイントの現在の角度|rad|
@@ -561,21 +542,18 @@ long型の配列として定義。
 |voltage|double|電圧値|V|
 |current|double|電流値|A|
 
-
 ### interpolationMode
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
 |LINEAR||
 |HOFFARBIB||
 
-
-
-
-
 ### STAlgorithm
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -586,7 +564,8 @@ long型の配列として定義。
 |EEFMQPCOP2||
 
 ### ControllerMode
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -597,7 +576,8 @@ long型の配列として定義。
 |MODE_SYNC_TO_AIR||
 
 ### EmergencyCheckMode
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -606,29 +586,24 @@ long型の配列として定義。
 |CP||
 |TILT||
 
-
 ### TwoDimensionVertex
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |position|[OpenHRP::ReferenceForceUpdaterService::DblArray2](#dblarray2)| |m|
 
 ### DblArray2
-double型の配列として定義。 
 
+double型の配列として定義。
 
 ### SupportPolygonVertices
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |position|sequence< [OpenHRP::ReferenceForceUpdaterService::TwoDimensionVertex](#twodimensionvertex) >|||
 
-
-
 ### IKLimbParameters
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |ik_optional_weight_vector|sequence< double >|||
@@ -638,7 +613,7 @@ double型の配列として定義。
 |manipulability_limit|double|||
 
 ### stParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |k_tpcc_p|[OpenHRP::StabilizerService::DblArray2](#dblarray2)| ||
@@ -706,10 +681,10 @@ double型の配列として定義。
 |limb_length_margin|sequence< double >| ||
 
 ### BoolSequence
-boolean型の配列として定義。 
+
+boolean型の配列として定義。
 
 ### Command
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -718,15 +693,14 @@ boolean型の配列として定義。
 |zmp|[OpenHRP::StabilizerService::DblSequence](#dblsequence)| |m|
 
 ### tlParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |debug_print_freq|unsigned long| ||
 |alarmRatio|double| ||
 
-
 ### torqueControllerParam
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |tc|double| ||

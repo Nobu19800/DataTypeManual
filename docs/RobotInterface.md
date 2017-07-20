@@ -1,33 +1,34 @@
 # IDLファイル
-- http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/idl/InterfaceDataTypes.idl
+
+* [InterfaceDataTypes.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/idl/InterfaceDataTypes.idl)
 
 # 目次
-- [ActArrayActuatorPos](#actarrayactuatorpos)
-- [ActArrayActuatorSpeed](#actarrayactuatorspeed)
-- [ActArrayActuatorCurrent](#actArrayactuatorcurrent)
-- [ActArrayState](#actarraystate)
-- [CameraImage](#cameraimage)
-- [Fiducials](#fiducials)
-- [GPSData](#gpsdata)
-- [GripperState](#gripperstate)
-- [INSData](#insdata)
-- [LimbState](#limbstate)
-- [Hypotheses2D](#hypotheses2d)
-- [Hypotheses3D](#hypotheses3d)
-- [Features](#features)
-- [MultiCameraImages](#multicameraimages)
-- [Path2D](#path2d)
-- [Path3D](#path3d)
-- [PointCloud](#pointcloud)
-- [PanTiltAngles](#pantiltangles)
-- [PanTiltState](#pantiltstate)
-- [RangeData](#rangedata)
-- [IntensityData](#intensitydata)
 
-
+* [ActArrayActuatorPos](#actarrayactuatorpos)
+* [ActArrayActuatorSpeed](#actarrayactuatorspeed)
+* [ActArrayActuatorCurrent](#actArrayactuatorcurrent)
+* [ActArrayState](#actarraystate)
+* [CameraImage](#cameraimage)
+* [Fiducials](#fiducials)
+* [GPSData](#gpsdata)
+* [GripperState](#gripperstate)
+* [INSData](#insdata)
+* [LimbState](#limbstate)
+* [Hypotheses2D](#hypotheses2d)
+* [Hypotheses3D](#hypotheses3d)
+* [Features](#features)
+* [MultiCameraImages](#multicameraimages)
+* [Path2D](#path2d)
+* [Path3D](#path3d)
+* [PointCloud](#pointcloud)
+* [PanTiltAngles](#pantiltangles)
+* [PanTiltState](#pantiltstate)
+* [RangeData](#rangedata)
+* [IntensityData](#intensitydata)
 
 ## ActArrayActuatorPos
-単一のアクチュエータの位置を格納するデータ型。  
+
+単一のアクチュエータの位置を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -35,9 +36,9 @@
 |index|unsigned short|アクチュエータの番号||
 |position|double|アクチュエータの位置|m or rad|
 
-
 ## ActArrayActuatorSpeed
-単一のアクチュエータの速度を格納するデータ型。  
+
+単一のアクチュエータの速度を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -45,10 +46,9 @@
 |index|unsigned short|アクチュエータの番号||
 |speed|double|アクチュエータの速度|m or rad|
 
-
-
 ## ActArrayActuatorCurrent
-単一のアクチュエータの電流値を格納するデータ型。  
+
+単一のアクチュエータの電流値を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -56,9 +56,9 @@
 |index|unsigned short|アクチュエータの番号||
 |current|double|アクチュエータの電流値|A|
 
-
 ## ActArrayState
-複数のアクチュエータの情報を格納するデータ型。  
+
+複数のアクチュエータの情報を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -66,10 +66,12 @@
 |actuators|[RTC::ActuatorList](#actuatorlist)|アクチュエータのリスト||
 
 ### ActuatorList
-[RTC::Actuator](#actuator)型の配列として定義。  
+
+[RTC::Actuator](#actuator)型の配列として定義。
 
 ### Actuator
-単一のアクチュエータの情報を格納する。  
+
+単一のアクチュエータの情報を格納する。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -79,10 +81,10 @@
 |current|double|現在の電流値|A|
 |status|[RTC::ActArrayActuatorStatus](#actArrayactuatorstatus)|状態||
 
-
 ### ActArrayActuatorStatus
-以下の値を列挙。  
-アクチュエータの状態を表現。  
+
+以下の値を列挙。
+アクチュエータの状態を表現。
 
 |名前|説明|
 |---|---|
@@ -91,9 +93,9 @@
 |ACTUATOR_STATUS_BRAKED|故障|
 |ACTUATOR_STATUS_STALLED|脱調|
 
-
 ### ActArrayGeometry
-複数のアクチュエータのジオメトリ情報を格納  
+
+複数のアクチュエータのジオメトリ情報を格納
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -101,11 +103,12 @@
 |actuatorGeometry|[RTC::ActArrayActuatorGeometryList](拡張データ型#actarrayactuatorgeometrylist)|ジオメトリ情報||
 
 ### ActArrayActuatorGeometryList
-[RTC::ActArrayActuatorGeometry](#actArrayactuatorgeometry)型の配列として定義。  
 
+[RTC::ActArrayActuatorGeometry](#actArrayactuatorgeometry)型の配列として定義。
 
 ### ActArrayActuatorGeometry
-個々のアクチュエータのジオメトリ情報を格納。  
+
+個々のアクチュエータのジオメトリ情報を格納。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -119,10 +122,9 @@
 |homePosition|double|ホームポジション|m or rad|
 |hasBrakes|boolean|故障時にTrue||
 
-
-
 ### ActArrayActuatorType
-以下の値を列挙。  
+
+以下の値を列挙。
 アクチュエータの種別を表現。
 
 |名前|説明|
@@ -130,25 +132,22 @@
 |ACTARRAY_ACTUATORTYPE_LINEAR|並進駆動|
 |ACTARRAY_ACTUATORTYPE_ROTARY|回転駆動|
 
-
-
-
 ### BumperArrayGeometry
-複数のバンパセンサのジオメトリ情報を格納。  
+
+複数のバンパセンサのジオメトリ情報を格納。
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |arrayGeometry|[RTC::Geometry3D](拡張データ型#Geometry3D)|配列全体のジオメトリ情報||
 |bumperGeometry|[RTC::BumperGeometryList](#bumpergeometrylist)|バンパのリスト||
 
-
 ### BumperGeometryList
-[RTC::BumperGeometry](#bumpergeometry)型の配列として定義。  
 
-
+[RTC::BumperGeometry](#bumpergeometry)型の配列として定義。
 
 ### BumperGeometry
-バンパセンサのジオメトリ情報。  
+
+バンパセンサのジオメトリ情報。
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -156,8 +155,8 @@
 |size|[RTC::Size3D](拡張データ型#size3d)|形状||
 |roc|double|バンプセンサの曲率半径|m|
 
-
 ## CameraImage
+
 画像データを表現するデータ型。
 今後はImg::TimedCameraImage型を使う事推奨。
 
@@ -174,8 +173,9 @@
 ![](img/CameraImage.png)
 
 ### CameraInfo
+
 カメラデバイスの情報を格納。
-  
+
 |名前|型|説明|単位|
 |---|---|---|---|
 |focalLength|[RTC::Vector2D](拡張データ型#Vector2D)|焦点距離||
@@ -185,20 +185,16 @@
 |p1|double|接線歪み係数1||
 |p2|double|接線歪み係数2||
 
-
 ## Fiducials
-  
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |fiducialsList|[RTC::FiducialInfoList](#FiducialInfoList)|||
 
-
 ### FiducialInfoList
-[RTC::FiducialInfoList](#fiducialinfolist)型の配列として定義。  
 
+[RTC::FiducialInfoList](#fiducialinfolist)型の配列として定義。
 
 ### FiducialInfo
 
@@ -210,8 +206,6 @@
 |size|[RTC::Size3D](拡張データ型#Size3D)|||
 |sizeUncertainty|[RTC::Size3D](拡張データ型#Size3D)|||
 
-
-
 ### FiducialFOV
 
 |名前|型|説明|単位|
@@ -220,9 +214,8 @@
 |maxRange|double||m|
 |viewAngle|double||rad|
 
-
-
 ## GPSData
+
 GPSの測位データを格納。
 
 |名前|型|説明|単位|
@@ -241,7 +234,8 @@ GPSの測位データを格納。
 |fixType|[RTC::GPSFixType](#gpsfixtype)| | |
 
 ### GPSFixType
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -250,16 +244,17 @@ GPSの測位データを格納。
 |GPS_FIX_DGPS||
 
 ### GPSTime
+
 GPS時を表現する。
-[RTC::Time](基本データ型#time)とは単位が違うので注意。  
+[RTC::Time](基本データ型#time)とは単位が違うので注意。
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |sec|unsigned long|秒|s|
 |msec|unsigned long|ミリ秒|ms|
 
-
 ## GripperState
+
 グリッパーの状態を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -267,9 +262,9 @@ GPS時を表現する。
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |status|[RTC::GripperStatus](#gripperstatus)|データ||
 
-
 ### GripperStatus
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -278,9 +273,9 @@ GPS時を表現する。
 |GRIPPER_STATE_MOVING|動作中|
 |GRIPPER_STATE_UNKNOWN|不明|
 
-
 ### GripperGeometry
-グリッパーのジオメトリ情報  
+
+グリッパーのジオメトリ情報
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -288,6 +283,7 @@ GPS時を表現する。
 |interior|[RTC::Geometry3D](拡張データ型#geometry3d)|||
 
 ## INSData
+
 慣性航法装置の自己位置を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -300,8 +296,8 @@ GPS時を表現する。
 |velocityENU|[RTC::Velocity3D](拡張データ型#velocity3d)|||
 |orientation|[RTC::Orientation3D](拡張データ型#orientation3d)|||
 
-
 ## LimbState
+
 エンドエフェクタの状態を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -310,9 +306,9 @@ GPS時を表現する。
 |oapMatrix|[RTC::OAP](拡張データ型#oap)|||
 |status|[RTC::LimbStatus](#limbstatus)|||
 
-
 ### LimbStatus
-以下の値を列挙。  
+
+以下の値を列挙。
 
 |名前|説明|
 |---|---|
@@ -322,18 +318,16 @@ GPS時を表現する。
 |LIMB_STATUS_OOR||
 |LIMB_STATUS_COLLISION|接触|
 
-
 ## Hypotheses2D
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |hypotheses|[RTC::Hypothesis2DList](#hypothesis2dlist)|データ||
 
-
 ### Hypothesis2DList
-[RTC::Hypothesis2D](#hypothesis2d)型の配列として定義。 
+
+[RTC::Hypothesis2D](#hypothesis2d)型の配列として定義。
 
 ### Hypothesis2D
 
@@ -343,20 +337,16 @@ GPS時を表現する。
 |covariance|[RTC::Covariance2D](拡張データ型#covariance2d)|||
 |weight|double|||
 
-
-
 ## Hypotheses3D
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |hypotheses|[RTC::Hypothesis3DList](#hypothesis3dList)|データ||
 
-
 ### Hypothesis3DList
-[RTC::Hypothesis3D](#hypothesis3d)型の配列として定義。 
 
+[RTC::Hypothesis3D](#hypothesis3d)型の配列として定義。
 
 ### Hypothesis3D
 
@@ -366,8 +356,8 @@ GPS時を表現する。
 |covariance|[RTC::Covariance3D](拡張データ型#covariance3d)|||
 |weight|double|||
 
-
 ### OGMapConfig
+
 占有格子地図を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -379,6 +369,7 @@ GPS時を表現する。
 |origin|[RTC::Pose2D](#pose2d)|(0,0)のセルの現在位置(ワールド座標)||
 
 ### OGMapTile
+
 タイルマップの表現
 
 |名前|型|説明|単位|
@@ -389,13 +380,11 @@ GPS時を表現する。
 |height|unsigned long|タイルの沿ったセルの数(Y)|個|
 |cells|[RTC::OGMapCells](#ogmapcells)|||
 
-
 ### OGMapCells
-octet型の配列として定義。 
 
+octet型の配列として定義。
 
 ## Features
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -405,11 +394,10 @@ octet型の配列として定義。
 |lineFeatures|[RTC::LineFeatureList](#linefeaturelist)|||
 
 ### PoseFeatureList
-[RTC::PoseFeature](#posefeature)型の配列として定義。 
 
+[RTC::PoseFeature](#posefeature)型の配列として定義。
 
 ### PoseFeature
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -418,11 +406,10 @@ octet型の配列として定義。
 |covariance|[RTC::PointCovariance2D](拡張データ型#pointcovariance2d)|||
 
 ### PointFeatureList
-[RTC::PointFeature](#pointfeature)型の配列として定義。 
 
+[RTC::PointFeature](#pointfeature)型の配列として定義。
 
 ### PointFeature
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -430,13 +417,11 @@ octet型の配列として定義。
 |position|[RTC::Pose2D](拡張データ型#pose2d)|||
 |covariance|[RTC::PointCovariance2D](拡張データ型#pointcovariance2d)|||
 
-
 ### LineFeatureList
-[RTC::LineFeature](#linefeature)型の配列として定義。 
 
+[RTC::LineFeature](#linefeature)型の配列として定義。
 
 ### LineFeature
-  
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -449,9 +434,8 @@ octet型の配列として定義。
 |startSighted|boolean|||
 |endSighted|boolean|||
 
-
-
 ## MultiCameraImages
+
 複数カメラの画像データを表現するデータ型。
 
 |名前|型|説明|単位|
@@ -460,13 +444,12 @@ octet型の配列として定義。
 |images|[RTC::MulticameraImageList](#multicameraimagelist)|データ||
 
 ### MulticameraInfoList
-[RTC::CameraImage](#cameraimage)型の配列として定義。 
 
-
+[RTC::CameraImage](#cameraimage)型の配列として定義。
 
 ### MulticameraImageList
-[RTC::CameraImage](#cameraimage)型の配列として定義。 
 
+[RTC::CameraImage](#cameraimage)型の配列として定義。
 
 ### MulticameraGeometry
 
@@ -476,11 +459,11 @@ octet型の配列として定義。
 |cameraGeometries|[RTC::MulticameraGeometryList](#multicamerageometrylist)|個々のカメラのジオメトリ情報||
 
 ### MulticameraGeometryList
-[RTC::Geometry3D](拡張データ型#geometry3d)型の配列として定義。 
 
-
+[RTC::Geometry3D](拡張データ型#geometry3d)型の配列として定義。
 
 ## Path2D
+
 2次元での目標経路を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -488,13 +471,13 @@ octet型の配列として定義。
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |waypoints|[RTC::Waypoint2DList](#waypoint2dlist)|データ||
 
-
 ### Waypoint2DList
-[RTC::Waypoint2D](#waypoint2d)型の配列として定義。   
 
+[RTC::Waypoint2D](#waypoint2d)型の配列として定義。
 
 ### Waypoint2D
-2次元でのウェイポイントを表現  
+
+2次元でのウェイポイントを表現
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -504,11 +487,10 @@ octet型の配列として定義。
 |timeLimit|[RTC::Time](基本データ型#time)|ウェイポイントに到達する目標時間||
 |maxSpeed|[RTC::Velocity2D](拡張データ型#velocity2d)|最大速度||
 
-
 ![](img/Path2D.png)
 
-
 ## Path3D
+
 3次元での目標経路を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -516,13 +498,13 @@ octet型の配列として定義。
 |tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
 |waypoints|[RTC::Waypoint3DList](#waypoint3dlist)|データ||
 
-
 ### Waypoint3DList
-[RTC::Waypoint3D](#waypoint3d)型の配列として定義。   
 
+[RTC::Waypoint3D](#waypoint3d)型の配列として定義。
 
 ### Waypoint3D
-3次元でのウェイポイントを表現  
+
+3次元でのウェイポイントを表現
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -532,9 +514,8 @@ octet型の配列として定義。
 |timeLimit|[RTC::Time](基本データ型#time)|ウェイポイントに到達する目標時間||
 |maxSpeed|[RTC::Velocity3D](拡張データ型#velocity3d)|最大速度||
 
-
-
 ## PointCloud
+
 3次元の点群を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -543,21 +524,20 @@ octet型の配列として定義。
 |points|[RTC::PointCloudPointList](#pointcloudpointlist)|データ||
 
 ### PointCloudPointList
-[RTC::PointCloudPoint](#pointcloudpoint)型の配列として定義。 
 
+[RTC::PointCloudPoint](#pointcloudpoint)型の配列として定義。
 
 ### PointCloudPoint
-ポイントクラウドの各点  
+
+ポイントクラウドの各点
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |point|[RTC::Point3D](拡張データ型#point3d)|位置||
 |colour|[RTC::RGBColour](拡張データ型#rgbcolour)|色||
 
-
-
-
 ## PanTiltAngles
+
 パン・チルトの姿勢を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -567,6 +547,7 @@ octet型の配列として定義。
 |tilt|double|上下の角度|rad|
 
 ## PanTiltState
+
 パン・チルトの状態を表現するデータ型。
 
 |名前|型|説明|単位|
@@ -579,6 +560,7 @@ octet型の配列として定義。
 ![](img/PanTiltAngles.png)
 
 ## RangeData
+
 測域センサの計測データを表現するデータ型。
 
 |名前|型|説明|単位|
@@ -588,28 +570,26 @@ octet型の配列として定義。
 |geometry|[RTC::RangerGeometry](#rangergeometry)|測域センサのジオメトリ情報||
 |config|[RTC::RangerConfig](#rangerconfig)|測域センサの設定情報||
 
-
 ### RangeList
-double型の配列として定義。 
 
-
+double型の配列として定義。
 
 ### RangerGeometry
-測域センサのジオメトリ情報  
 
+測域センサのジオメトリ情報
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |geometry|[RTC::Geometry3D](拡張データ型#geometry3d)|全体のジオメトリ情報||
 |elementGeometries|[RTC::ElementGeometryList](#elementgeometrylist)|個々のセンサのジオメトリ情報||
 
-
 ### ElementGeometryList
-[RTC::Geometry3D](拡張データ型#geometry3d)型の配列として定義。 
 
+[RTC::Geometry3D](拡張データ型#geometry3d)型の配列として定義。
 
 ### RangerConfig
-測域センサの設定情報  
+
+測域センサの設定情報
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -623,9 +603,7 @@ double型の配列として定義。
 
 ![](img/RangeData.png)
 
-
 ## IntensityData
-
 
 |名前|型|説明|単位|
 |---|---|---|---|
@@ -634,11 +612,10 @@ double型の配列として定義。
 |geometry|[RTC::RangerGeometry](#rangergeometry)|測域センサのジオメトリ情報||
 |config|[RTC::RangerConfig](#rangerconfig)|測域センサの設定情報||
 
-
-
 ### IntensityList
-double型の配列として定義。 
+
+double型の配列として定義。
 
 ### RFIDTagData
-octet型の配列として定義。 
 
+octet型の配列として定義。

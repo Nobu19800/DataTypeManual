@@ -1,5 +1,9 @@
 # 目次
-- [MIDI](#midi)
+
+* [MIDI](#midi)
+
 # MIDI
+
 ## IDLファイル
-- https://github.com/HiroakiMatsuda/MIDIDataType/blob/master/MIDIDataType.idl
+
+* [MIDIDataType.idl](https://github.com/HiroakiMatsuda/MIDIDataType/blob/master/MIDIDataType.idl)

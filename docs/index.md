@@ -1,6 +1,7 @@
 このページではOpenRTM-aistで利用されているデータ型について説明します。
 
 # 一覧
+
 * [基本データ型](BasicDataTypes)
 * [拡張データ型](ExtendDataTypes)
 * [ロボットインターフェース固有データ型](RobotInterface)
@@ -14,5 +15,6 @@
 * [その他](Others)
 
 # 利用方法
-- [パターン別](Patterns)
+
+* [パターン別](Patterns)
 
