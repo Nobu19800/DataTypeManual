@@ -1,18 +1,18 @@
 このページではOpenRTM-aistで利用されているデータ型について説明します。
 
 # 一覧
-* [BasicDataTypes](基本データ型)
-* [ExtendDataTypes](拡張データ型)
-* [RobotInterface](ロボットインターフェース固有データ型)
-* [RobotArm](ロボットアーム)
-* [ImageProcessing](画像処理)
+* [基本データ型](BasicDataTypes)
+* [拡張データ型](ExtendDataTypes)
+* [ロボットインターフェース固有データ型](RobotInterface)
+* [ロボットアーム](RobotArm)
+* [画像処理](ImageProcessing)
 * [OpenHRP](OpenHRP)
-* [PointCloud](ポイントクラウド)
-* [MultiLegged](多足歩行)
-* [SoundData](音声データ)
-* [VideoData](動画データ)
-* [Others](その他)
+* [ポイントクラウド](PointCloud)
+* [多足歩行](MultiLegged)
+* [音声データ](SoundData)
+* [動画データ](VideoData)
+* [その他](Others)
 
 # 利用方法
-- [Patterns](パターン別)
+- [パターン別](Patterns)
 
