@@ -1,8 +1,8 @@
 # IDLファイル
 
-* [ManipulatorCommonInterface_Common.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/ext/ManipulatorCommonInterface_Common.idl)
-* [ManipulatorCommonInterface_DataTypes.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/ext/ManipulatorCommonInterface_DataTypes.idl)
-* [ManipulatorCommonInterface_Middle.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/ext/ManipulatorCommonInterface_Middle.idl)
+* [ManipulatorCommonInterface_Common.idl](https://github.com/OpenRTM/OpenRTM-aist/blob/master/src/lib/rtm/ext/rtmManipulator/ManipulatorCommonInterface_Common.idl)
+* [ManipulatorCommonInterface_DataTypes.idl](https://github.com/OpenRTM/OpenRTM-aist/blob/master/src/lib/rtm/ext/rtmManipulator/ManipulatorCommonInterface_DataTypes.idl)
+* [ManipulatorCommonInterface_Middle.idl](https://github.com/OpenRTM/OpenRTM-aist/blob/master/src/lib/rtm/ext/rtmManipulator/ManipulatorCommonInterface_Middle.idl)
 
 # 目次
 
