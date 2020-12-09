@@ -14,7 +14,7 @@
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |pos|[JARA_ARM::JointPos](#jointpos)|ジョイントの位置|m or rad|
 
 ### JointPos
