@@ -1,6 +1,6 @@
 # IDLファイル
 
-* [CameraCommonInterface.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/ext/CameraCommonInterface.idl)
+* [CameraCommonInterface.idl](https://github.com/OpenRTM/OpenRTM-aist/blob/master/src/lib/rtm/ext/rtmCamera/CameraCommonInterface.idl)
 
 # 目次
 
@@ -13,7 +13,7 @@
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|[Img::CameraImage](#cameraimage)|データ||
 |error_code|long|エラー情報||
 
@@ -23,7 +23,7 @@
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|captured_time|[RTC::Time](基本データ型#time)|撮影時刻||
+|captured_time|[RTC::Time](BasicDataTypes#time)|撮影時刻||
 |image|[Img::ImageData](#imagedata)|画像データ||
 |intrinsic|[Img::CameraIntrinsicParameter](#CameraIntrinsicParameter)|カメラ内部パラメータ||
 |extrinsic|[Img::Mat44](#mat44)|カメラ外部パラメータ||
@@ -98,7 +98,7 @@
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|[Img::MultiCameraImage](#multicameraimage)|データ||
 |error_code|long|エラー情報||
 
