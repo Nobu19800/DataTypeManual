@@ -289,7 +289,7 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|sequence< sequence< long > >|データ||
 
 ## TimedQuaternion
@@ -298,7 +298,7 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|[OpenHRP::Quaternion](#quaternion)>|データ||
 
 ### Quaternion
@@ -318,7 +318,7 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|[OpenHRP::Wrench](#wrench)>|データ||
 
 ### Wrench
@@ -327,8 +327,8 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|force|[RTC::Vector3D](拡張データ型#vector3d)|力||N|
-|torque|[RTC::Vector3D](拡張データ型#vector3d)|トルク||Nm|
+|force|[RTC::Vector3D](ExtendDataTypes#vector3d)|力||N|
+|torque|[RTC::Vector3D](ExtendDataTypes#vector3d)|トルク||Nm|
 
 ## TimedSpatialVelocity
 
@@ -336,7 +336,7 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|tm|[RTC::Time](基本データ型#time)|タイムスタンプ||
+|tm|[RTC::Time](BasicDataTypes#time)|タイムスタンプ||
 |data|[OpenHRP::SpatialVelocity](#spatialvelocity)>|データ||
 
 ### SpatialVelocity
@@ -345,15 +345,15 @@ long型の2次元配列を格納するデータ型。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|omega|[RTC::AngularVelocity3D](拡張データ型#angularvelocity3d)|角速度||
-|vel|[RTC::Velocity3D](拡張データ型#velocity3d)|角度||
+|omega|[RTC::AngularVelocity3D](ExtendDataTypes#angularvelocity3d)|角速度||
+|vel|[RTC::Velocity3D](ExtendDataTypes#velocity3d)|角度||
 
 ### RobotState
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |name|string|||
-|basePose|[RTC::Pose3D](拡張データ型#pose3d)|||
+|basePose|[RTC::Pose3D](ExtendDataTypes#pose3d)|||
 |q|sequence< double >|||
 
 ### RobotStateSeq
@@ -454,19 +454,19 @@ double型の2次元配列として定義。
 
 |名前|型|説明|単位|
 |---|---|---|---|
-|pos|[RTC::Point3D](拡張データ型#point3d)|x,y,zのいずれかが最小の頂点座標||
-|size|[RTC::Size3D](拡張データ型#size3d)|x,y,zの長さ||
+|pos|[RTC::Point3D](ExtendDataTypes#point3d)|x,y,zのいずれかが最小の頂点座標||
+|size|[RTC::Size3D](ExtendDataTypes#size3d)|x,y,zの長さ||
 
 ### OGMap3D
 
 |名前|型|説明|単位|
 |---|---|---|---|
 |resolution|double|||
-|pos|[RTC::Point3D](拡張データ型#point3d)|||
+|pos|[RTC::Point3D](ExtendDataTypes#point3d)|||
 |nx|double|||
 |ny|double|||
 |nz|double|||
-|cells|[RTC::OGMapCells](拡張データ型#ogmapcells)|||
+|cells|[RTC::OGMapCells](ExtendDataTypes#ogmapcells)|||
 
 ### ReferenceForceUpdaterParam
 
@@ -534,7 +534,7 @@ long型の配列として定義。
 |angle|[OpenHRP::RobotHardwareService::DblSequence](#dblsequence)|ジョイントの現在の角度|rad|
 |command|[OpenHRP::RobotHardwareService::DblSequence](#dblsequence)| |rad|
 |torque|[OpenHRP::RobotHardwareService::DblSequence](#dblsequence)|ジョイントのトルク|Nm|
-|servoState|[OpenHRP::ReferenceForceUpdaterService::LongSequenceSequence](拡張データ型#longsequencesequence)|0番目:モーターキャリブレーションの状態(1で完了)  1番目:サーボの状態(1でオン)  2番目:電源の状態(1で供給されている)  3-18番目:サーボアラーム(iob.h)  19-23番目:未使用  24-31番目：|m|
+|servoState|[OpenHRP::ReferenceForceUpdaterService::LongSequenceSequence](ExtendDataTypes#longsequencesequence)|0番目:モーターキャリブレーションの状態(1で完了)  1番目:サーボの状態(1でオン)  2番目:電源の状態(1で供給されている)  3-18番目:サーボアラーム(iob.h)  19-23番目:未使用  24-31番目：|m|
 |force|[OpenHRP::RobotHardwareService::DblSequence6](#dblsequence6)|力、トルク|N and Nm|
 |rateGyro|[OpenHRP::RobotHardwareService::DblSequence3](#dblsequence3)|角速度|rad/s|
 |accel|[OpenHRP::RobotHardwareService::DblSequence3](#dblsequence3)|加速度|m/s^2|
