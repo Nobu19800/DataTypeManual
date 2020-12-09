@@ -1,6 +1,6 @@
 # IDLファイル
 
-* [InterfaceDataTypes.idl](http://svn.openrtm.org/OpenRTM-aist/trunk/OpenRTM-aist/src/lib/rtm/idl/InterfaceDataTypes.idl)
+* [InterfaceDataTypes.idl](https://github.com/OpenRTM/OpenRTM-aist/blob/master/src/lib/rtm/idl/InterfaceDataTypes.idl)
 
 # 目次
 
